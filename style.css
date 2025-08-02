@@ -52,6 +52,10 @@ button{
     width: auto;
     object-fit: contain;
 }
+.logo img:hover {    
+    transform: rotate(360deg);
+    transition: 2s;
+}
 .links{
     display: flex;
 }
