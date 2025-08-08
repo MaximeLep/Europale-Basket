@@ -1,5 +1,28 @@
 // ----------------------------------------------------- //
-//                 PAGE : TEAMS.HTML                     //
+//               PAGE : INDEX.HTML - START                 //
+// ----------------------------------------------------- //
+
+const logoImg = document.querySelector('.logo img');
+
+  logoImg.addEventListener('mouseenter', () => {
+    // On ajoute la classe d'animation
+    logoImg.classList.add('rotate');
+  });
+
+  logoImg.addEventListener('mouseleave', () => {
+    // On laisse l'animation finir mais on enlève la classe après 2s
+    setTimeout(() => {
+      logoImg.classList.remove('rotate');
+    }, 2000); // durée de l'animation
+  });
+
+// ------------------------------------------------------- //
+//                PAGE : INDEX.HTML - END                    //
+// ------------------------------------------------------- //
+ 
+
+// ----------------------------------------------------- //
+//               PAGE : TEAMS.HTML - START               //
 // ----------------------------------------------------- //
  (function(){
     const track = document.querySelector('.carousel_track');
@@ -210,3 +233,14 @@ function updatePlayPauseIcon() {
 // ----------------------------------------------------- //
 //               PAGE : TEAMS.HTML - END                 //
 // ----------------------------------------------------- //
+
+// ----------------------------------------------------- //
+//               PAGE : TIB.HTML - START                 //
+// ----------------------------------------------------- //
+
+
+
+// ------------------------------------------------------- //
+//                PAGE : TIB.HTML - END                    //
+// ------------------------------------------------------- //
+

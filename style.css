@@ -44,18 +44,22 @@ button{
     font-family: 'Anton', sans-serif;
     display: flex;
     align-items: center;
-    gap: 50px; /* espace entre le texte et l'image */
+    gap: 50px;
 }
 
 .logo img {
-    height: 100px; /* petite taille, tu peux ajuster */
+    height: 100px; 
     width: auto;
     object-fit: contain;
+    transition: transform 2s linear;
 }
 .logo img:hover {    
     transform: rotate(360deg);
     transition: 2s;
 }
+.rotate {
+    animation: rotate360 2s linear forwards;
+  }
 .links{
     display: flex;
 }
@@ -84,10 +88,23 @@ button{
     width: 100%;
 }
 /* home_page_content */
-.home_page_content{
+/* Effet apparition depuis la gauche */
+.home_page_content {
     position: absolute;
     bottom: 60px;
+    opacity: 0;
+    transform: translateX(-100px); /* départ hors de l'écran à gauche */
+    animation: slideInFromLeft 1s ease forwards;
+    animation-delay: 0.3s;
 }
+
+@keyframes slideInFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .home_page_content span{
     display: flex;
     align-items: center;
@@ -132,18 +149,31 @@ button{
     margin-left: 20px;
 }
 /* image_box */
-.image_box{
+.image_box {
     position: absolute;
     bottom: -140px;
     right: 7%;
+    opacity: 0;
+    transform: translateX(100px); /* Décalage hors écran à droite */
+    animation: slideInFromRight 1s ease-out forwards;
+    animation-delay: 0.3s; /* petit délai pour le timing */
 }
-.image_box img{
+
+.image_box img {
     border-radius: 6px;
     width: 600px;
     height: 500px;
     object-fit: cover;
     box-shadow: 0 32px 80px rgba(0, 0, 0, .24);
 }
+
+@keyframes slideInFromRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .image_box p{
     margin-top: 20px;
     text-align: right;
