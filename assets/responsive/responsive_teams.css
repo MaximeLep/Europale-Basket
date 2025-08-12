@@ -150,84 +150,19 @@
     max-width: 100px;
   }
 }
-
-
-/* Tablets and medium screens (up to 992px) */
-@media (max-width: 992px) {
-  .match_trailer {
-    padding: 30px 8%;
-  }
-  .match_trailer .section_title {
-    font-size: 28px;
-  }
-  .video_container {
-    max-width: 600px;
-  }
-  .play_button {
-    width: 60px;
-    height: 60px;
-  }
-  .play_button::before {
-    border-width: 12px 0 12px 20px;
-  }
-}
-
-/* Small tablets and large mobiles (up to 768px) */
+/* Responsive - réduire la hauteur max sur petits écrans */
 @media (max-width: 768px) {
-  .match_trailer {
-    padding: 25px 5%;
-  }
-  .match_trailer .section_title {
-    font-size: 24px;
-  }
-  .video_container {
-    max-width: 100%;
-  }
-  .play_button {
-    width: 50px;
-    height: 50px;
-  }
-  .play_button::before {
-    border-width: 10px 0 10px 18px;
-  }
-}
-
-/* Mobile portrait and small screens (up to 480px) */
-@media (max-width: 480px) {
-  .match_trailer {
+  .video_teams {
     padding: 20px 5%;
   }
-  .match_trailer .section_title {
-    font-size: 20px;
-  }
-  .play_button {
-    width: 45px;
-    height: 45px;
-  }
-  .play_button::before {
-    border-width: 8px 0 8px 15px;
+  
+  .video_teams .team_video {
+    max-height: 300px;
   }
 }
 
-/* Very small phones (up to 360px) */
-@media (max-width: 360px) {
-  .match_trailer {
-    padding: 15px 3%;
-  }
-  .match_trailer .section_title {
-    font-size: 18px;
-  }
-  .play_button {
-    width: 40px;
-    height: 40px;
-  }
-  .play_button::before {
-    border-width: 7px 0 7px 12px;
-  }
-}
-@media (max-width: 400px) {
-  .phone_left, .phone_center, .phone_right {
-    width: 30vw;
-    max-width: 100px;
+@media (max-width: 480px) {
+  .video_teams .team_video {
+    max-height: 200px;
   }
 }

@@ -86,8 +86,9 @@
   background-color: #097eeb;
   padding: 60px 15%;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 0;  /* Supprime la marge du bas */
   box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  overflow: hidden; /* Pour contenir les marges des enfants */
 }
 
 .social_follow .social_text h2 {
@@ -171,161 +172,6 @@
 }
 
 
-.match_trailer {
-  padding: 40px 15%;
-  text-align: center;
-  background-color: #f4f4f4;
-  margin-top: 60px;
-  border-radius: 8px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards ease-out;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.match_trailer .section_title {
-  color: #097eeb;
-  margin-bottom: 30px;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(9,126,235,0.3);
-}
-
-.video_container {
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 12px 24px rgba(9,126,235,0.3);
-  position: relative;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-}
-
-.video_container:hover {
-  box-shadow: 0 20px 40px rgba(9,126,235,0.5);
-}
-
-video {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-  will-change: transform;
-  pointer-events: none; /* On désactive la vidéo pour ne pas interférer avec le bouton play */
-}
-
-.video_container:hover video {
-  transform: scale(1.05);
-}
-
-/* Bouton play custom */
-.play_button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(9,126,235,0.8);
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background 0.3s ease;
-  z-index: 10;
-  box-shadow: 0 4px 12px rgba(9,126,235,0.6);
-}
-
-.play_button:hover {
-  background: #097eeb;
-  box-shadow: 0 6px 16px rgba(9,126,235,0.8);
-}
-
-.play_button::before {
-  content: '';
-  border-style: solid;
-  border-width: 15px 0 15px 26px;
-  border-color: transparent transparent transparent white;
-  margin-left: 5px;
-}
-
-.video_controls {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(9, 126, 235, 0.8);
-  padding: 8px 12px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  z-index: 9999; /* bien au-dessus */
-  user-select: none;
-  transition: opacity 0.3s ease;
-}
-
-/* Quand tu es en plein écran, forcer affichage */
-:fullscreen .video_controls {
-  display: flex !important;
-}
-
-
-.video_controls button {
-  background-color: rgba(9, 126, 235, 0.8);
-  border: none;
-  color: white;
-  font-size: 22px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  user-select: none;
-}
-
-.video_controls button:hover {
-  background-color: #097eeb;
-}
-
-#volumeControl {
-  width: 100px;
-  cursor: pointer;
-  border-radius: 5px;
-  height: 8px;
-  -webkit-appearance: none;
-  background: #097eeb;
-}
-
-#volumeControl::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background: white;
-  cursor: pointer;
-  border-radius: 50%;
-  border: 1px solid #097eeb;
-  margin-top: -4px;
-}
-
-#volumeControl::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  background: white;
-  cursor: pointer;
-  border-radius: 50%;
-  border: 1px solid #097eeb;
-}
-
 .gallery_teams_girls {
   padding: 60px 20px;
   background-color: #f4f4f4;
@@ -379,6 +225,46 @@ video {
   color: #1d3557;
 }
 
+.video_teams {
+  padding: 40px 15%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.video_teams .team_video {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+  pointer-events: none;
+  filter: brightness(0.9);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Effet au survol (léger zoom + luminosité) */
+.video_teams:hover .team_video {
+  transform: scale(1.02);
+  filter: brightness(1);
+}
+
+/* Animation légère pour éviter la statique (ex: zoom in-out lent) */
+@keyframes subtleZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+}
+
+.video_teams .team_video {
+  animation: subtleZoom 20s ease-in-out infinite;
+}
 
 
 

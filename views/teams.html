@@ -213,34 +213,12 @@
             </a>
         </div>
     </section>
-
-    <section class="match_trailer">
-        <h2 class="section_title">Retrouvez les moments fort de nos jeunes</h2>
-        <p class="text">Nhésite pas clique et découvre nos jeunes pirates !</p>
-        <div class="video_container" id="videoContainer">
-            <video id="matchVideo" poster="poster.jpg" preload="metadata">
-                <source src="../assets/img/video/Grotte.mp4" type="video/mp4" />
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-
-            <div class="video_controls">
-                <button id="playPauseBtn" aria-label="Play/Pause">▶️</button>
-                <input
-                  type="range"
-                  id="volumeControl"
-                  min="0"
-                  max="1"
-                  step="0.05"
-                  value="0.5"
-                  aria-label="Volume"
-                />
-                <button id="fullscreenBtn" aria-label="Fullscreen">⛶</button>
-            </div>
-
-            <div class="play_button" id="playButton"></div>
-        </div>
+    <section class="video_teams">
+      <video autoplay muted loop playsinline class="team_video">
+        <source src="../assets/img/video/Grotte.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
     </section>
-    <br /><br /><br /><br />
 
     <!-- footeur -->
          <footer class="site-footer">
