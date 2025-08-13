@@ -83,13 +83,38 @@
 
 /* social_follow */
 .social_follow {
-  background-color: #097eeb;
+  position: relative; /* nécessaire pour ::before et ::after */
   padding: 60px 15%;
   text-align: center;
-  margin-bottom: 0;  /* Supprime la marge du bas */
+  margin-bottom: 0;
   box-shadow: 0 16px 40px rgba(0,0,0,0.08);
-  overflow: hidden; /* Pour contenir les marges des enfants */
+  overflow: hidden;
+  background-color: #097eeb; /* couleur principale */
 }
+
+/* Dégradé vers le haut */
+.social_follow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* hauteur du fondu */
+  background: linear-gradient(to top, #097eeb, #f4f4f4);
+}
+
+/* Dégradé vers le bas */
+.social_follow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, #097eeb, #f4f4f4);
+}
+
+
 
 .social_follow .social_text h2 {
   font-family: 'Anton', sans-serif;
@@ -233,7 +258,6 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
 }
 
 .video_teams .team_video {
