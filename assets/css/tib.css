@@ -1,0 +1,171 @@
+/* ===== Présentation du Tournoi ===== */
+
+.tib-presentation {
+  padding: 120px 12%;
+  background-color: #f4f4f4;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.tib-presentation::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: rgba(9,126,235,0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.presentation-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 120px;
+  position: relative;
+  z-index: 1;
+}
+
+.presentation-text {
+  flex: 1;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.presentation-text h2 {
+  font-size: 44px;
+  color: #000;
+  margin-bottom: 25px;
+  position: relative;
+  line-height: 1.2;
+}
+
+.presentation-text h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: #097eeb;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
+.presentation-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+.blue-btn {
+  background: #097eeb;
+  color: #fff;
+  border: none;
+  padding: 16px 38px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px -8px rgba(9,126,235,0.4);
+}
+
+.blue-btn:hover {
+  background: #005bb5;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px -10px rgba(9,126,235,0.5);
+}
+
+.presentation-image {
+  flex: 1;
+  transform: rotate(-2deg);
+  transition: 0.4s ease;
+}
+
+.presentation-image img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 25px 60px -20px rgba(0,0,0,.25);
+}
+
+.presentation-image:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+/* ===== Villes hôtes ===== */
+
+.villes-hotes h3 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.villes-hotes h3::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #097eeb;
+  margin: 18px auto 0;
+  border-radius: 4px;
+}
+
+.villes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 45px;
+}
+
+.ville-card {
+  background: linear-gradient(180deg, #ffffff, #f8faff);
+  overflow: hidden;
+  box-shadow: 0 25px 60px -25px rgba(0,0,0,.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  padding-bottom: 20px;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.ville-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.ville-card h4 {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #097eeb;
+}
+
+.ville-card p {
+  padding: 10px 25px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+.ville-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 35px 70px -25px rgba(0,0,0,.25);
+}
+
+/* ===== Animations ===== */
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

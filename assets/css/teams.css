@@ -1,0 +1,489 @@
+.gallery_teams {
+  padding: 20px 15%;
+  text-align: center;
+}
+
+.section_title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #097eeb;
+  text-align: center;
+}
+
+.carousel_container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel_track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px;
+}
+
+.team_card {
+  min-width: 250px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.team_card:hover {
+  transform: scale(1.05);
+}
+
+.team_card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.team_card figcaption {
+  padding: 15px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.carousel_btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(9, 126, 235, 0.8);
+  border: none;
+  color: white;
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.carousel_btn:hover {
+  background-color: #097eeb;
+}
+
+.carousel_btn.prev {
+  left: 10px;
+}
+
+.carousel_btn.next {
+  right: 10px;
+}
+
+/* social_follow */
+.social_follow {
+  position: relative; /* nécessaire pour ::before et ::after */
+  padding: 60px 15%;
+  text-align: center;
+  margin-bottom: 0;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  overflow: hidden;
+  background-color: #097eeb; /* couleur principale */
+}
+
+/* Dégradé vers le haut */
+.social_follow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* hauteur du fondu */
+  background: linear-gradient(to top, #097eeb, #f4f4f4);
+}
+
+/* Dégradé vers le bas */
+.social_follow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, #097eeb, #f4f4f4);
+}
+
+
+
+.social_follow .social_text h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 38px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.social_follow .social_text p {
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 35px;
+  font-size: 18px;
+}
+
+.social_icons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.social_btn {
+  font-size: 28px;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social_btn:hover {
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transform: scale(1.15);
+}
+
+.social_btn.facebook:hover { background-color: #3b5998; }
+/* Remplacement Twitter par TikTok */
+.social_btn.tiktok:hover {
+  background: linear-gradient(45deg, #69C9D0, #EE1D52, #000000);
+}
+
+.social_btn.instagram:hover { 
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.social_btn.youtube:hover { background-color: #ff0000; }
+
+
+.phone-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 40px 0;
+}
+
+.phone {
+  filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.35));
+}
+
+.phone-left {
+  width: 360px;
+  transform: rotate(-10deg);
+}
+
+.phone-center {
+  width: 400px;
+  filter: drop-shadow(4px 4px 7px rgba(0,0,0,0.45));
+}
+
+.phone-right {
+  width: 360px;
+  transform: rotate(10deg);
+}
+
+
+.gallery_teams_girls {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.gallery_teams_girls .section_title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #d618e7;
+}
+
+.gallery_teams_girls .text {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #333333;
+}
+
+.teams_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.team_card {
+  width: 200px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.team_card:hover {
+  transform: translateY(-5px);
+}
+
+.team_card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.team_card figcaption {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 12px;
+  background-color: #fff;
+  color: #1d3557;
+}
+
+.video_teams {
+  padding: 40px 15%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.video_teams .team_video {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+  pointer-events: none;
+  filter: brightness(0.9);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Effet au survol (léger zoom + luminosité) */
+.video_teams:hover .team_video {
+  transform: scale(1.02);
+  filter: brightness(1);
+}
+
+/* Animation légère pour éviter la statique (ex: zoom in-out lent) */
+@keyframes subtleZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+}
+
+.video_teams .team_video {
+  animation: subtleZoom 20s ease-in-out infinite;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+:root {
+  --main-color: #097eeb;
+  --dark: #0d0d0d;
+  --light: #fff;
+}
+
+/* Base des sections coach et joueurs */
+.coach_cards, .u_cards {
+  padding: 60px 10%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.coach_cards h2, .u_cards h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: var(--dark);
+  text-transform: uppercase;
+}
+
+/* Container des cartes */
+.cards_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Carte générale */
+.card {
+  position: relative;
+  width: 260px;
+  height: 380px;
+  border-radius: 0;
+  overflow: hidden;
+  background: var(--light);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25); /* box-shadow renforcé */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35); /* box-shadow au hover plus profond */
+}
+
+/* Image pleine carte */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Nom et prénom stylisés */
+.card h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  background: linear-gradient(to right, rgba(255,255,255,0.85), rgba(0,0,0,0.8));
+  transform: skewY(-6deg);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  z-index: 3;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover h3 {
+  transform: skewY(-6deg) scale(1.07);
+  background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(0,0,0,0.7));
+}
+
+/* Texte secondaire */
+.card p {
+  font-size: 14px;
+  color: #eee;
+  margin-top: 5px;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+/* Joueurs : overlay avec numéro */
+.u_cards .card {
+  cursor: pointer;
+}
+
+.u_cards .card .overlay {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 126, 235, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.4s ease;
+  z-index: 2;
+}
+
+.u_cards .card:hover .overlay {
+  top: 0;
+}
+
+.player_number {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  transform: translateY(-20px);
+  animation: slideDown 0.4s forwards;
+}
+
+.u_cards .card:hover .player_number {
+  transform: translateY(0);
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.championship_ranking {
+  padding: 60px 10%;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.championship_ranking h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: var(--dark);
+  text-transform: uppercase;
+}
+
+.ranking_table_container {
+  overflow-x: auto; /* permet le scroll horizontal si écran trop petit */
+}
+
+.ranking_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  min-width: 600px; /* assure que le tableau soit lisible sans zoom */
+}
+
+.ranking_table th, .ranking_table td {
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.ranking_table thead {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.ranking_table tbody tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+.ranking_table tbody tr:hover {
+  background-color: rgba(9, 126, 235, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Mettre en valeur l'équipe Europale */
+.ranking_table tbody tr.highlight-team {
+  background-color: rgba(9, 126, 235, 0.3); /* bleu clair semi-transparent */
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.ranking_table tbody tr.highlight-team:hover {
+  background-color: rgba(9, 126, 235, 0.5); /* hover plus visible */
+  transition: background-color 0.3s ease;
+}
