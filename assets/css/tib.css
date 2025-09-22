@@ -169,3 +169,157 @@
     transform: translateY(0);
   }
 }
+
+
+/* ===== Formules & Services ===== */
+.formules-services {
+  padding: 100px 12%;
+  background: linear-gradient(135deg, #f3f8ff 0%, #ffffff 100%);
+  color: #000;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  color: #097eeb;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #097eeb;
+  margin: 15px auto 0;
+  border-radius: 4px;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Packages */
+.packages {
+  display: flex;
+  gap: 45px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.package-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 25px 60px -20px rgba(0,0,0,.15);
+  padding: 30px 25px;
+  flex: 1 1 300px;
+  max-width: 350px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 35px 70px -25px rgba(0,0,0,.25);
+}
+
+.package-card h3 {
+  font-size: 28px;
+  color: #097eeb;
+  margin-bottom: 10px;
+}
+
+.package-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.package-card ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.package-card ul li {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #000;
+}
+
+.package-card .included {
+  font-size: 13px;
+  color: #444;
+}
+
+/* Extra Services */
+.extra-services {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.extra-services h3 {
+  font-size: 32px;
+  color: #097eeb;
+  margin-bottom: 30px;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.service-card {
+  background: #f0f7ff;
+  border-radius: 20px;
+  padding: 20px 15px;
+  width: 140px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-weight: bold;
+  color: #097eeb;
+  font-size: 14px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(9,126,235,0.3);
+  background: #097eeb;
+}
+
+.service-card:hover p {
+  color: #fff;
+}
+
+.contact-note {
+  font-size: 14px;
+}
+
+.contact-note a {
+  color: #097eeb;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-note a:hover {
+  color: #005bb5;
+}
