@@ -254,46 +254,8 @@
   <p class="contact-note">❓ Pour toute question, veuillez nous <a href="coming_soon.html">contacter</a>.</p>
 </section>
 
-<!-- ================= MEDIAS SECTION ================= -->
-<section class="medias-section">
-  <div class="container">
-    <h2 class="section-title">Médias</h2>
-    <p class="section-subtitle">Revivez les moments forts du T.I.B</p>
 
-    <!-- Galerie photos avec carrousel -->
-    <div class="media-carousel">
-      <div class="carousel-track">
-        <img src="../assets/img/cover_home.jpeg" alt="Match TIB" />
-        <img src="../assets/img/cover_home.jpeg" alt="Cérémonie" />
-        <img src="../assets/img/cover_home.jpeg" alt="Ambiance tribune" />
-        <img src="../assets/img/cover_home.jpeg" alt="Coupes et trophées" />
-      </div>
-      <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
-    </div>
-
-    <!-- Réseaux sociaux -->
-    <div class="social-media">
-      <div class="social-card">
-        <i class="fab fa-facebook-f"></i>
-        <h3>Facebook</h3>
-        <p>Rejoignez notre communauté et suivez toutes nos actualités.</p>
-        <a href="https://www.facebook.com/TIBWIMEREUX" target="_blank" class="btn-social">Suivez-nous</a>
-      </div>
-      <div class="social-card">
-        <i class="fab fa-instagram"></i>
-        <h3>Instagram</h3>
-        <p>Découvrez les coulisses et les meilleurs moments en images.</p>
-        <a href="https://www.instagram.com/tibwimereuxcotedopale/" target="_blank" class="btn-social">Suivez-nous</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- footeur -->
+<!-- Footer -->
     <footer class="site-footer">
         <!-- Sponsors défilants -->
         <div class="sponsor-bar">
@@ -420,48 +382,6 @@
           });
         });
           </script>
-          <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector(".carousel-track");
-    const images = document.querySelectorAll(".carousel-track img");
-    const prevBtn = document.querySelector(".carousel-btn.prev");
-    const nextBtn = document.querySelector(".carousel-btn.next");
-
-    let index = 0;
-    const imgWidth = images[0].clientWidth + 20; // largeur + margin-right
-    const total = images.length;
-
-    // Fonction pour mettre à jour la position
-    function updateCarousel() {
-      track.style.transform = `translateX(${-index * imgWidth}px)`;
-    }
-
-    // Bouton suivant
-    nextBtn.addEventListener("click", () => {
-      index = (index + 1) % total;
-      updateCarousel();
-    });
-
-    // Bouton précédent
-    prevBtn.addEventListener("click", () => {
-      index = (index - 1 + total) % total;
-      updateCarousel();
-    });
-
-    // Défilement auto toutes les 4s
-    setInterval(() => {
-      index = (index + 1) % total;
-      updateCarousel();
-    }, 4000);
-
-    // Responsive : recalcul largeur image au redimensionnement
-    window.addEventListener("resize", () => {
-      index = 0;
-      updateCarousel();
-    });
-  });
-</script>
-
         <script src="../script.js"></script>
 
 </body>
