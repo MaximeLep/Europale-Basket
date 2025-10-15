@@ -1,0 +1,79 @@
+/* Responsive Galerie */
+
+/* Petits écrans mobiles */
+@media screen and (max-width: 480px) {
+  .gallery-section {
+    padding: 40px 5%;
+  }
+
+  .gallery-item {
+    width: 100%; /* Une image par ligne */
+    margin: 5px 0;
+  }
+
+  .gallery-item img {
+    height: 200px;
+  }
+}
+
+/* Smartphones et petits tablettes */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .gallery-item {
+    width: calc(50% - 20px); /* 2 images par ligne */
+    margin: 10px;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+}
+
+/* Tablettes et petits écrans laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .gallery-item {
+    width: calc(33.333% - 20px); /* 3 images par ligne */
+    margin: 10px;
+  }
+
+  .gallery-item img {
+    height: 160px;
+  }
+}
+
+/* Écrans larges */
+@media screen and (min-width: 1025px) {
+  .gallery-item {
+    width: calc(25% - 20px); /* 4 images par ligne */
+    margin: 10px;
+  }
+
+  .gallery-item img {
+    height: 140px;
+  }
+}
+
+/* Centrage flex pour la grille */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrer les items */
+  margin: -10px; /* Compense le margin des items */
+}
+
+/* Ajuster overlay et légendes sur petit écran */
+@media screen and (max-width: 768px) {
+  .gallery-item::after {
+    left: -100%;
+  }
+
+  .caption {
+    font-size: 14px;
+    padding: 6px;
+    gap: 5px;
+  }
+
+  .download-btn {
+    padding: 5px 6px;
+    font-size: 12px;
+  }
+}
