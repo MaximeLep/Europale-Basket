@@ -100,51 +100,57 @@
   </div>
 
 <section class="gallery-section">
-        <div class="filters">
-            <button data-filter="*" class="active">Global</button>
-            <button data-filter=".weekend">Photos du week-end</button>
-            <button data-filter=".u9">U9</button>
-            <button data-filter=".u11">U11</button>
-            <button data-filter=".u13">U13</button>
-            <button data-filter=".seniors">Seniors</button>
+    <div class="filters">
+        <button data-filter="*" data-gallery="global" class="active">Global</button>
+        <button data-filter=".y2024" data-gallery="2024">2024</button>
+        <button data-filter=".y2025" data-gallery="2025">2025</button>
+        <button data-filter=".y2026" data-gallery="2026">2026</button>
+    </div>
+
+    <div class="gallery-grid">
+        <!-- Exemple pour 2024 -->
+        <div class="gallery-item y2024">
+            <a href="../assets/img/photo2024_1.jpg" class="glightbox" data-title='Événement 2024 - Photo 1'>
+                <img src="../assets/img/photo2024_1.jpg" alt="Photo 2024" />
+            </a>
+            <div class="caption">
+                <p>Événement 2024 - Photo 1</p>
+                <a href="../assets/img/photo2024_1.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
         </div>
 
-        <div class="gallery-grid">
-            <div class="gallery-item weekend">
-                <a href="../assets/img/cover_home.jpeg" class="glightbox" data-gallery="galerie" data-title='Match U13 - Janvier 2025 <br><a href="../assets/img/cover_home.jpeg" download style="color:#097eeb; font-weight:bold;"><i class="fa-solid fa-download"></i> Télécharger</a>'>
-                    <img src="../assets/img/cover_home.jpeg" alt="Photo week-end" />
+        <!-- Exemple pour 2025 -->
+        <div class="gallery-item y2025">
+            <a href="../assets/img/cover_home.jpeg" class="glightbox" data-title='Événement 2025 - Photo 1'>
+                <img src="../assets/img/cover_home.jpeg" alt="Photo 2025" />
+            </a>
+            <div class="caption">
+                <p>Événement 2025 - Photo 1</p>
+                <a href="../assets/img/cover_home.jpeg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
                 </a>
-                <div class="caption">
-                    <p>Match U13 - Janvier 2025</p>
-                    <a href="../assets/img/cover_home.jpeg" download class="download-btn">
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="gallery-item u9">
-                <a href="../assets/img/cover_home.jpeg" class="glightbox" data-gallery="galerie" data-title='U9 - Entraînement Février 2025 <br><a href="../assets/img/cover_home.jpeg" download style="color:#097eeb; font-weight:bold;"><i class="fa-solid fa-download"></i> Télécharger</a>'>
-                    <img src="../assets/img/cover_home.jpeg" alt="U9" />
-                </a>
-                <div class="caption">
-                    <p>U9 - Entraînement Février 2025</p>
-                    <a href="../assets/img/cover_home.jpeg" download class="download-btn">
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="gallery-item seniors">
-                <a href="../assets/img/cover_home.jpeg" class="glightbox" data-gallery="galerie" data-title='Seniors - Match Avril 2025 <br><a href="../assets/img/cover_home.jpeg" download style="color:#097eeb; font-weight:bold;"><i class="fa-solid fa-download"></i> Télécharger</a>'>
-                    <img src="../assets/img/cover_home.jpeg" alt="Seniors" />
-                </a>
-                <div class="caption">
-                    <p>Seniors - Match Avril 2025</p>
-                    <a href="../assets/img/cover_home.jpeg" download class="download-btn">
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-                </div>
             </div>
         </div>
-    </section>
+
+        <!-- Exemple pour 2026 -->
+        <div class="gallery-item y2026">
+            <a href="../assets/img/photo2026_1.jpg" class="glightbox" data-title='Événement 2026 - Photo 1'>
+                <img src="../assets/img/photo2026_1.jpg" alt="Photo 2026" />
+            </a>
+            <div class="caption">
+                <p>Événement 2026 - Photo 1</p>
+                <a href="../assets/img/photo2026_1.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Duplique les gallery-item pour ajouter d'autres photos par année -->
+    </div>
+</section>
+
 
   
 <div class="villes-hotes">

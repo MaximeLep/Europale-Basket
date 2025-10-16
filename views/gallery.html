@@ -75,51 +75,515 @@
 
     <!-- Galerie filtrable -->
     <section class="gallery-section">
-        <div class="filters">
-            <button data-filter="*" class="active">Global</button>
-            <button data-filter=".weekend">Photos du week-end</button>
-            <button data-filter=".u9">U9</button>
-            <button data-filter=".u11">U11</button>
-            <button data-filter=".u13">U13</button>
-            <button data-filter=".seniors">Seniors</button>
+    <div class="filters">
+        <button data-filter="*" data-gallery="global" class="active">Global</button>
+        <button data-filter=".weekend" data-gallery="weekend">Photos du week-end</button>
+        <button data-filter=".u9" data-gallery="u9">U9</button>
+        <button data-filter=".u11b" data-gallery="u11b">U11B</button>
+        <button data-filter=".u11a" data-gallery="u11a">U11A</button>
+        <button data-filter=".u13" data-gallery="u13">U13</button>
+        <button data-filter=".u15b" data-gallery="u15b">U15B</button>
+        <button data-filter=".u15a" data-gallery="u15a">U15A</button>
+        <button data-filter=".u18b" data-gallery="u18b">U18B</button>
+        <button data-filter=".u18a" data-gallery="u18a">U18A</button>
+        <button data-filter=".u21" data-gallery="u21">U21</button>
+        <button data-filter=".dm3-2" data-gallery="dm3-2">DM3-2</button>
+        <button data-filter=".dm3-1" data-gallery="dm3-1">DM3-1</button>
+        <button data-filter=".dm2" data-gallery="dm2">DM2</button>
+        <button data-filter=".dm1" data-gallery="dm1">DM1</button>
+    </div>
+
+    <div class="gallery-grid">
+        <!-- Exemple de galerie-item, duplique et adapte selon ton nombre de photos -->
+        <div class="gallery-item weekend">
+            <a href="../assets/img/cover_home.jpeg" class="glightbox" data-title='Match U13 - Janvier 2025'>
+                <img src="../assets/img/cover_home.jpeg" alt="Photo week-end" />
+            </a>
+            <div class="caption">
+                <p>Match U13 - Janvier 2025</p>
+                <a href="../assets/img/cover_home.jpeg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
         </div>
 
-        <div class="gallery-grid">
-            <div class="gallery-item weekend">
-                <a href="../assets/img/cover_home.jpeg" class="glightbox" data-gallery="galerie" data-title='Match U13 - Janvier 2025 <br><a href="../assets/img/cover_home.jpeg" download style="color:#097eeb; font-weight:bold;"><i class="fa-solid fa-download"></i> Télécharger</a>'>
-                    <img src="../assets/img/cover_home.jpeg" alt="Photo week-end" />
+        <div class="gallery-item u9">
+            <a href="../assets/img/logo_europale/fond-blanc-since-1994.jpg" class="glightbox" data-title='U9 - Entraînement Février 2025'>
+                <img src="../assets/img/logo_europale/fond-blanc-since-1994.jpg" alt="U9" />
+            </a>
+            <div class="caption">
+                <p>U9 - Entraînement Février 2025</p>
+                <a href="../assets/img/logo_europale/fond-blanc-since-1994.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
                 </a>
-                <div class="caption">
-                    <p>Match U13 - Janvier 2025</p>
-                    <a href="../assets/img/cover_home.jpeg" download class="download-btn">
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="gallery-item u9">
-                <a href="../assets/img/cover_home.jpeg" class="glightbox" data-gallery="galerie" data-title='U9 - Entraînement Février 2025 <br><a href="../assets/img/cover_home.jpeg" download style="color:#097eeb; font-weight:bold;"><i class="fa-solid fa-download"></i> Télécharger</a>'>
-                    <img src="../assets/img/cover_home.jpeg" alt="U9" />
-                </a>
-                <div class="caption">
-                    <p>U9 - Entraînement Février 2025</p>
-                    <a href="../assets/img/cover_home.jpeg" download class="download-btn">
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="gallery-item seniors">
-                <a href="../assets/img/cover_home.jpeg" class="glightbox" data-gallery="galerie" data-title='Seniors - Match Avril 2025 <br><a href="../assets/img/cover_home.jpeg" download style="color:#097eeb; font-weight:bold;"><i class="fa-solid fa-download"></i> Télécharger</a>'>
-                    <img src="../assets/img/cover_home.jpeg" alt="Seniors" />
-                </a>
-                <div class="caption">
-                    <p>Seniors - Match Avril 2025</p>
-                    <a href="../assets/img/cover_home.jpeg" download class="download-btn">
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-                </div>
             </div>
         </div>
-    </section>
+
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0001.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0001.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0001.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0003.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0003.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0003.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0004.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0004.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0004.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0005.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0005.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0005.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0006.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0006.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0006.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0007.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0007.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0007.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0008.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0008.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0008.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0009.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0009.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0009.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0011.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0011.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0011.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0013.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0013.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0013.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0014.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0014.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0014.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0015.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0015.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0015.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0017.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0017.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0017.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0018.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0018.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0018.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0019.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0019.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0019.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0021.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0021.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0021.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0022.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0022.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0022.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0024.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0024.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0024.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0026.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0026.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0026.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0027.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0027.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0027.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0028.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0028.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0028.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0029.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0029.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0029.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0030.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0030.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0030.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0031.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0031.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0031.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0032.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0032.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0032.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0033.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0033.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0033.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0034.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0034.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0034.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0035.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0035.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0035.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0037.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0037.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0037.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0038.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0038.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0038.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0039.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0039.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0039.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0040.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0040.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0040.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0041.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0041.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0041.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0042.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0042.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0042.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0043.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0043.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0043.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0044.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0044.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0044.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0045.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0045.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0045.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0046.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0046.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0046.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0047.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0047.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0047.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0048.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0048.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0048.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0049.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0049.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0049.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item u21">
+            <a href="../assets/img/gallery/u21/IMG-20251016-WA0050.jpg" class="glightbox" data-title='U21 - Match Septembre 2025'>
+                <img src="../assets/img/gallery/u21/IMG-20251016-WA0050.jpg" alt="u21" />
+            </a>
+            <div class="caption">
+                <p>U21 - Match Septembre 2025</p>
+                <a href="../assets/img/gallery/u21/IMG-20251016-WA0050.jpg" download class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Tu peux ajouter ici les autres catégories avec leurs images et légendes -->
+    </div>
+</section>
 
     
 <!-- Footer -->
@@ -238,37 +702,63 @@
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="../script.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const lightbox = GLightbox({
-                selector: '.glightbox',
-                touchNavigation: true,
-                loop: true,
-                zoomable: true,
-                openEffect: 'fade',
-                closeEffect: 'fade',
-                slideEffect: 'slide',
-                descPosition: 'bottom',
-                moreLength: 120
-            });
+     document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.querySelector('.gallery-grid');
+    const iso = new Isotope(grid, {
+        itemSelector: '.gallery-item',
+        layoutMode: 'fitRows',
+        percentPosition: true,
+    });
 
-            // Filtrage isotope
-            const grid = document.querySelector('.gallery-grid');
-            const iso = new Isotope(grid, {
-                itemSelector: '.gallery-item',
-                layoutMode: 'fitRows',
-                percentPosition: true,
-            });
+    let lightbox;
 
-            const filters = document.querySelectorAll('.filters button');
-            filters.forEach(button => {
-                button.addEventListener('click', () => {
-                    filters.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    const filterValue = button.getAttribute('data-filter');
-                    iso.arrange({ filter: filterValue });
-                });
-            });
+    const initLightbox = (galleryName) => {
+        if (lightbox) lightbox.destroy(); // détruit l’ancienne instance
+
+        const visibleItems = grid.querySelectorAll('.gallery-item');
+        visibleItems.forEach(item => {
+            const a = item.querySelector('a.glightbox');
+            if (item.style.display !== 'none') {
+                a.setAttribute('data-gallery', galleryName);
+            }
         });
+
+        lightbox = GLightbox({
+            selector: `a[data-gallery="${galleryName}"]`,
+            touchNavigation: true,
+            loop: false,
+            zoomable: true,
+            openEffect: 'fade',
+            closeEffect: 'fade',
+            slideEffect: 'slide',
+            descPosition: 'bottom',
+            moreLength: 120
+        });
+    };
+
+    // Initialisation au chargement
+    initLightbox('global');
+
+    // Gestion des filtres
+    const filters = document.querySelectorAll('.filters button');
+    filters.forEach(button => {
+        button.addEventListener('click', () => {
+            filters.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+            const galleryName = button.getAttribute('data-gallery');
+
+            iso.arrange({ filter: filterValue });
+
+            setTimeout(() => {
+                initLightbox(galleryName); // réinitialise GLightbox sur le filtre actif
+            }, 300); // temps pour laisser Isotope afficher/masquer les images
+        });
+    });
+});
+
+
     </script>
 </body>
 </html>
