@@ -45,7 +45,7 @@
             </span>
             <h1 class="title">Bienvenue sur notre<br>site Web !</h1>
             <p class="text">Découvrez notre club de basket, nos équipes et nos valeurs en voyageant <br> à travers notre site.</p>
-            <button class="white_btn">En savoir plus <i class="fa-solid fa-angle-right"></i></button>
+            <button class="white_btn" id="scrollBtn">En savoir plus <i class="fa-solid fa-angle-right"></i></button>
         </div>
         <!-- image_box -->
          <div class="image_box">
@@ -54,10 +54,11 @@
          </div>
      </section>
      <!-- text_section -->
-      <section class="text_section">
-        <p>EUROPALE</p>
-        <h2>Engagement - Convivialité - Détermination <br> Dépassement de soi - Découverte</h2>
+      <section class="text_section" id="about">
+          <p>EUROPALE</p>
+          <h2>Engagement - Convivialité - Détermination <br> Dépassement de soi - Découverte</h2>
       </section>
+
       <!-- owner -->
      <section class="owner">
             <div class="image_box_owner">
@@ -254,6 +255,7 @@
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="views/coming_soon.html">Événements</a></li>
                     <li><a href="views/teams.html">Équipes</a></li>
+                    <li><a href="views/gallery.html">Galerie</a></li>
                     <li><a href="views/coming_soon.html">Contact</a></li>
                   </ul>
                 </div>
@@ -296,6 +298,14 @@
             observer.observe(section);
           });
         });
+          </script>
+          <script>
+              const button = document.getElementById('scrollBtn');
+              const targetSection = document.getElementById('about');
+
+              button.addEventListener('click', () => {
+                  targetSection.scrollIntoView({ behavior: 'smooth' });
+              });
           </script>
     <script src="script.js"></script>
 

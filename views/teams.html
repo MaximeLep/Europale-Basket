@@ -31,14 +31,14 @@
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="coming_soon.html">Événements</a></li>
                 <li><a href="teams.html">Équipes</a></li>
-                <li><a href="coming_soon.html">Galerie</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
                 <li><a href="coming_soon.html">Contact</a></li>
             </ul>
             <ul class="links">
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="coming_soon.html">Événements</a></li>
                 <li><a href="teams.html">Équipes</a></li>
-                <li><a href="coming_soon.html">Galerie</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
                 <li><a href="coming_soon.html">Contact</a></li>
             </ul>
         </div>
@@ -58,9 +58,8 @@
                 <br />
                 à travers notre site.
             </p>
-            <button class="white_btn">
-                En savoir plus <i class="fa-solid fa-angle-right"></i>
-            </button>
+            <button class="white_btn" id="scrollBtn">En savoir plus <i class="fa-solid fa-angle-right"></i></button>
+
         </div>
 
         <!-- image_box -->
@@ -73,13 +72,10 @@
     </section>
 
     <!-- text_section -->
-    <section class="text_section">
-        <p>EUROPALE</p>
-        <h2>
-            Engagement - Convivialité - Détermination <br />
-            Dépassement de soi - Découverte
-        </h2>
-    </section>
+    <section class="text_section" id="about">
+          <p>EUROPALE</p>
+          <h2>Engagement - Convivialité - Détermination <br> Dépassement de soi - Découverte</h2>
+      </section>
     <br /><br />
 
     <!-- galery_section -->
@@ -305,7 +301,7 @@
                   <ul>
                     <li><a href="../index.html">Accueil</a></li>
                     <li><a href="coming_soon.html">Événements</a></li>
-                    <li><a href="teams.html">Équipes</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
                     <li><a href="coming_soon.html">Contact</a></li>
                   </ul>
                 </div>
@@ -349,6 +345,14 @@
             observer.observe(section);
           });
         });
+          </script>
+          <script>
+              const button = document.getElementById('scrollBtn');
+              const targetSection = document.getElementById('about');
+
+              button.addEventListener('click', () => {
+                  targetSection.scrollIntoView({ behavior: 'smooth' });
+              });
           </script>
     <script src="../script.js"></script>
 </body>
