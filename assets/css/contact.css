@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Section Contact */
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), 
+                url(../img/salle/spalding-left.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* Bouton retour accueil */
+.backHome {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.backHome a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #097eeb;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.backHome a:hover {
+    background-color: #065ecb;
+    transform: translateY(-2px);
+}
+
+/* Contenu texte */
+.contact .content,
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact .content p {
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+/* Container flex */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden; /* empêche le scroll horizontal à cause des animations */
+    position: relative;
+}
+
+/* Contact Info */
+.container .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-150%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.container.animate .contactInfo {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #333;
+}
+
+.container .contactInfo .box .icon i {
+  color: #097eeb;
+  font-size: 24px;
+}
+
+.container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3 {
+    font-weight: 500;
+    color: #097eeb;
+}
+
+/* Contact Form */
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    transform: translateX(150%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+    position: relative;
+}
+
+.container.animate .contactForm {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Overlay indisponible */
+.contactForm::after {
+    content: "Indisponible pour le moment";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 3;
+}
+
+/* Input box */
+.contactForm h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #097eeb;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/* Input focus */
+.contactForm .inputBox input:focus,
+.contactForm .inputBox textarea:focus {
+    border-bottom: 2px solid #097eeb;
+    box-shadow: 0 2px 10px rgba(9, 126, 235, 0.2);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Bouton submit */
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    background: #097eeb;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.contactForm .inputBox input[type="submit"]:hover {
+    background: #065ecb;
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .contact {
+        padding: 50px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .contactInfo {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .contactForm {
+        width: 100%;
+    }
+}
