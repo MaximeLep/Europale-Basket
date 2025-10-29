@@ -62,9 +62,8 @@
                 <br>
                 Sinon je t'invite à découvrir l'équipe en voyageant un peu plus bas.
             </p>
-            <button class="white_btn">
-                Voir les matchs <i class="fa-solid fa-angle-right"></i>
-            </button>
+              <button class="white_btn" id="scrollBtn">En savoir plus <i class="fa-solid fa-angle-right"></i></button>
+
         </div>
 
         <!-- image_box -->
@@ -77,12 +76,9 @@
     </section>
 
     <!-- text_section -->
-    <section class="text_section">
+    <section class="text_section" id="about">
         <p>EUROPALE</p>
-        <h2>
-            Engagement - Convivialité - Détermination <br />
-            Dépassement de soi - Découverte
-        </h2>
+        <h2>Engagement - Convivialité - Détermination <br /> Dépassement de soi - Découverte</h2>
     </section>
 <br><br>
 <!-- Section Coachs -->
@@ -316,6 +312,14 @@
             observer.observe(section);
           });
         });
+          </script>
+          <script>
+              const button = document.getElementById('scrollBtn');
+              const targetSection = document.getElementById('about');
+
+              button.addEventListener('click', () => {
+                  targetSection.scrollIntoView({ behavior: 'smooth' });
+              });
           </script>
     <script src="../../script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
