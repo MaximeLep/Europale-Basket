@@ -291,29 +291,6 @@
               <p>&copy; 2025 Europale Basket Club. Tous droits réservés.</p>
             </div>
           </footer>
-<script>
-                    document.addEventListener('DOMContentLoaded', () => {
-          const sections = document.querySelectorAll('section');
-
-          const observerOptions = {
-            threshold: 0.2,
-          };
-
-          const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if(entry.isIntersecting) {
-                entry.target.classList.add('section-visible');
-                observer.unobserve(entry.target);
-              }
-            });
-          }, observerOptions);
-
-          sections.forEach(section => {
-            section.classList.add('section-hidden');
-            observer.observe(section);
-          });
-        });
-          </script>
     <script src="../../script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 

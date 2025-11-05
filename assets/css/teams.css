@@ -394,8 +394,7 @@
 }
 
 .u_cards .card .overlay {
-  position: absolute;
-  top: -100%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -403,13 +402,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: top 0.4s ease;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.4s ease;
   z-index: 2;
 }
 
 .u_cards .card:hover .overlay {
-  top: 0;
+  opacity: 1;
+  transform: translateY(0);
 }
+
 
 .player_number {
   font-size: 50px;
