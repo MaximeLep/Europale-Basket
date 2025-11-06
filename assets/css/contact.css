@@ -11,9 +11,9 @@
 .contact {
     position: relative;
     min-height: 100vh;
-    padding: 50px 100px;
+    padding: 90px 100px; /* ↑ espace vertical légèrement augmenté */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* contenu légèrement vers le haut */
     align-items: center;
     flex-direction: column;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), 
@@ -37,7 +37,7 @@
 .backHome {
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 35px; /* ↑ plus d’espace sous le bouton */
     position: relative;
     z-index: 2;
 }
@@ -75,28 +75,31 @@
     font-size: 36px;
     font-weight: 500;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .contact .content p {
     font-weight: 300;
     color: #fff;
-    margin-bottom: 50px;
+    margin-bottom: 60px; /* ↑ espace avant le container pour aérer */
     line-height: 1.8;
 }
 
 /* Container flex */
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* équilibre horizontalement */
     align-items: flex-start;
-    overflow: hidden; /* empêche le scroll horizontal à cause des animations */
+    gap: 60px; /* ↑ espace entre les colonnes */
+    overflow: hidden;
     position: relative;
+    max-width: 1150px; /* ↑ plus large pour mieux respirer */
+    margin: 0 auto;
 }
 
 /* Contact Info */
 .container .contactInfo {
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     transform: translateX(-150%);
@@ -111,7 +114,7 @@
 
 .container .contactInfo .box {
     position: relative;
-    padding: 20px 0;
+    padding: 25px 0; /* ↑ espace entre les blocs d’infos */
     display: flex;
 }
 
@@ -148,8 +151,8 @@
 
 /* Contact Form */
 .contactForm {
-    width: 40%;
-    padding: 40px;
+    width: 45%;
+    padding: 50px; /* ↑ un peu plus d’air interne */
     background: #fff;
     transform: translateX(150%);
     opacity: 0;
@@ -260,9 +263,11 @@
     }
     .container {
         flex-direction: column;
+        gap: 35px;
+        align-items: center;
     }
     .container .contactInfo {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
         width: 100%;
     }
     .contactForm {
