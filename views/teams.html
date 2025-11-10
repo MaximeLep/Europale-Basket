@@ -177,45 +177,123 @@
     </figure>
   </div>
 </section>
-
-    <br /><br /><br />
-
-    <!-- social_follow -->
-    <section class="social_follow">
-        <div class="social_text">
-            <h2>🔥 Venez suivre l'aventure de nos équipes sur nos réseaux sociaux 🔥</h2>
-            <p>Retrouvez toutes les actus, photos et vidéos exclusives.</p>
+        <div class="social-title">
+            <h1>🌐 Suis nos exploits sur les réseaux ! 🏀🌟</h1>
         </div>
+        <div class="center-phone">
+            <img src="../assets/img/réseaux_sociaux/phone.png" alt="phone" class="phone-img">
 
-        <!-- Ici les 3 téléphones -->
-        <div class="phone-container">
-            <img src="../assets/img/cover_home.jpeg" alt="Téléphone gauche" class="phone phone-left" />
-            <img src="../assets/img/cover_home.jpeg" alt="Téléphone centre" class="phone phone-center" />
-            <img src="../assets/img/cover_home.jpeg" alt="Téléphone droite" class="phone phone-right" />
+            <div class="phone">
+                <!-- Écran de verrouillage / Accueil -->
+                <div class="lock-screen">
+                    <!-- Fond et overlay -->
+                    <div class="lock-background"></div>
+
+                    <!-- Contenu centré -->
+                    <div class="lock-content">
+                        <h1 class="time">19:94</h1>
+                        <p class="date">Dimanche 1 Mai</p>
+
+                        <!-- Notifications -->
+                        <div class="notifications">
+                            <div class="notification">
+                                <span class="notif-icon">📩</span>
+                                <span class="notif-text">2 nouveaux messages</span>
+                            </div>
+                            <div class="notification">
+                                <span class="notif-icon">🔔</span>
+                                <span class="notif-text">1 événement à venir</span>
+                            </div>
+                        </div>
+
+                        <!-- Bouton déverrouiller -->
+                        <button id="unlock-btn">Déverrouiller</button>
+                    </div>
+                </div>
+
+                <!-- Écran principal (profil Facebook) -->
+                <div class="main-screen">
+                    <!-- Barre de statut -->
+                    <div class="status-bar">
+                        <span>19:94</span>
+                        <span>📶 🔋</span>
+                    </div>
+
+                    <!-- Header profil Facebook -->
+                    <div class="profile-header">
+                        <div class="cover-photo"></div>
+                        <img class="profile-pic" src="../assets/img/logo_europale/fond-blanc-since-1994.jpg" alt="Profil">
+                        <h2 class="user-name">Europale Basket Club Wimille Wimereux</h2>
+                        <div class="action-buttons">
+                            <button class="follow-btn">🔔 Suivi(e)</button>
+                            <a class="whatsapp-btn" href="https://wa.me/+33676376729" target="_blank">
+                                💬 WhatsApp
+                            </a>
+                        </div>
+                        <div class="stats">
+                            <div><strong>2.9K</strong><span>Followers</span></div>
+                            <div><strong>123</strong><span>Suivi(e)s</span></div>
+                        </div>
+                        <p class="bio">
+                            🔹U9 à U21 (Départ & Région) <br>
+                            🔹DM1, DM2, DM3 <br>
+                            🔹Féminines : U11 & U13 & U15 <br>
+                            🔹Baby basket & section loisirs <br>
+                            🔹Basket collège en partenariat avec le collège de Wimille <br>
+                            ✅ Club labellisé : Basket Santé, Inclusif, Citoyen, Ecole de mini basket <br>
+                            🔗 <a href="https://www.facebook.com/europalebcww" target="_blank">Page Facebook officielle</a><br>
+                            🔗 <a href="https://www.instagram.com/europalebasket/" target="_blank">Page Instagram officielle</a>
+                        </p>
+
+                    </div>
+
+                    <!-- Publications -->
+                    <div class="posts">
+                        <div class="post">
+                            <div class="post-header">
+                                <img class="post-pic" src="../assets/img/logo_europale/fond-blanc-since-1994.jpg" alt="Europale Basket Club Wimille Wimereux">
+                                <div class="post-user-info">
+                                    <strong>Europale Basket Club Wimille Wimereux</strong>
+                                    <span> · 1 semaine</span>
+                                </div>
+                            </div>
+                            <img src="../assets/img/réseaux_sociaux/resultat_week.jpg" alt="Post 1">
+                            <div class="post-actions">
+                                <span>👍 J’aime</span>
+                                <span>💬 Commenter</span>
+                                <span>↪ Partager</span>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-header">
+                                <img class="post-pic" src="../assets/img/logo_europale/fond-blanc-since-1994.jpg" alt="Europale Basket Club Wimille Wimereux">
+                                <div class="post-user-info">
+                                    <strong>Europale Basket Club Wimille Wimereux</strong>
+                                    <span> · 1 semaine</span>
+                                </div>
+                            </div>
+                            <img src="../assets/img/réseaux_sociaux/match_week.jpg" alt="Post 2">
+                            <div class="post-actions">
+                                <span>👍 J’aime</span>
+                                <span>💬 Commenter</span>
+                                <span>↪ Partager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Barre navigation Facebook -->
+                    <div class="bottom-nav">
+                        <span>🏠</span>
+                        <span>👥</span>
+                        <span>🛒</span>
+                        <span>🔔</span>
+                        <span>☰</span>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="social_icons">
-            <a href="https://www.facebook.com/europalebcww" target="_blank" aria-label="Facebook" class="social_btn facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.tiktok.com/@europalebasketclub" target="_blank" aria-label="TikTok" class="social_btn tiktok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="https://www.instagram.com/europalebasket/" target="_blank" aria-label="Instagram" class="social_btn instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://youtube.com/" target="_blank" aria-label="YouTube" class="social_btn youtube">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
-    </section>
-    <section class="video_teams">
-      <video autoplay muted loop playsinline class="team_video">
-        <source src="../assets/img/video/Grotte.mp4" type="video/mp4" />
-        Votre navigateur ne supporte pas la vidéo.
-      </video>
-    </section>
-
+        
     <!-- footeur -->
          <footer class="site-footer">
             <!-- Sponsors défilants -->
@@ -354,6 +432,31 @@
                   targetSection.scrollIntoView({ behavior: 'smooth' });
               });
           </script>
+          <script>
+          const unlockBtn = document.getElementById('unlock-btn');
+          const lockScreen = document.querySelector('.lock-screen');
+          const mainScreen = document.querySelector('.main-screen');
+
+          unlockBtn.addEventListener('click', () => {
+              // Afficher le profil immédiatement avec opacity 0
+              mainScreen.style.display = 'block';
+
+              // Petite pause pour déclencher la transition CSS
+              setTimeout(() => {
+                  mainScreen.classList.add('show');
+                  lockScreen.style.transform = 'translateY(-100%)';
+                  lockScreen.style.opacity = '0';
+              }, 20);
+
+              // Masquer complètement l'écran de verrouillage après l'animation
+              setTimeout(() => {
+                  lockScreen.style.display = 'none';
+              }, 620); // correspond à la durée de la transition
+          });
+</script>
+
+
+
     <script src="../script.js"></script>
 </body>
 </html>

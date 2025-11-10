@@ -12,6 +12,17 @@ const burger = document.querySelector('.burger');
             links.classList.toggle('show');
         });
 
+
+
+        const unlockBtn = document.getElementById('unlock-btn');
+            const lockScreen = document.querySelector('.lock-screen');
+            const mainScreen = document.querySelector('.main-screen');
+
+            unlockBtn.addEventListener('click', () => {
+                lockScreen.style.display = 'none';
+                mainScreen.style.display = 'block';
+            });
+
 // ------------------------------------------------------- //
 //                PAGE : GLOBAL - END                    //
 // ------------------------------------------------------- //
@@ -159,7 +170,7 @@ logoImg.addEventListener('mouseleave', () => {
 
 })();
 
-// ----------------------------------------------------- //
+
 //               PAGE : TEAMS.HTML - END                 //
 // ----------------------------------------------------- //
 
@@ -198,3 +209,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+ 
