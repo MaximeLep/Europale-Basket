@@ -385,16 +385,11 @@ button{
     align-items: center;
     justify-content: center;
 }
-.services .box i {
-    font-size: 40px;
-    color:#097eeb;
-    background-color: #f7f0e6;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.services .box img {
+    width: 400px;        /* largeur très grande */
+    height: 250px;       /* hauteur proportionnelle pour garder le rectangle */
+    object-fit: contain; /* affiche toute l'image sans couper */
+    margin-bottom: 20px; /* espace entre l'image et le titre */
 }
 .services .box h2 {
     margin-top: 30px;
@@ -403,6 +398,26 @@ button{
 .services .box p {
     color: #999;
 }
+.services .box .details {
+    color: #555;         /* texte plus doux que le prix */
+    font-size: 14px;     /* légèrement plus petit */
+    margin-top: 5px;     /* petit espace au-dessus */
+}
+
+.contact {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+}
+
+.contact p {
+    color: #333;
+    font-size: 16px;
+}
+
 /* testimonials */
 .testimonials {
     margin: 120px 0;

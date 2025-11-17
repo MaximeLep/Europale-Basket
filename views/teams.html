@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- Home -->
-    <section class="home" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../assets/img/cover_home.jpeg'); background-position: center; background-size: cover;">
+    <section class="home" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../assets/img/cover/cover_equipe.jpg'); background-position: center; background-size: cover;">
           <div class="menu">
             <div class="logo"><img src="../assets/img/logo_europale/fond-blanc-since-1994.jpg" alt=""> Europale - Équipes </div>
             <div class="burger">
@@ -46,8 +46,8 @@
         <!-- Home_page_content -->
         <div class="home_page_content">
             <span>
-                <i class="fa-solid fa-trophy"></i>
-                <p>26 Rue Hector Berlioz, 62930 Wimereux</p>
+                <i class="fa-solid fa-users"></i>
+                <p>Équipes 2025 - 2026</p>
             </span>
             <h1 class="title">
                 Ici, vous découvrirez<br />
@@ -453,6 +453,50 @@
                   lockScreen.style.display = 'none';
               }, 620); // correspond à la durée de la transition
           });
+</script>
+<script>document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel_track");
+  const prevButton = document.querySelector(".carousel_btn.prev");
+  const nextButton = document.querySelector(".carousel_btn.next");
+  const cards = Array.from(track.children);
+
+  let cardWidth = cards[0].getBoundingClientRect().width;
+  let currentIndex = 0;
+
+  // Positionne les cartes horizontalement
+  const setCardPosition = () => {
+    cards.forEach((card, index) => {
+      card.style.left = `${index * cardWidth}px`;
+    });
+  };
+
+  setCardPosition();
+
+  // Met à jour cardWidth lors du redimensionnement de la fenêtre
+  window.addEventListener("resize", () => {
+    cardWidth = cards[0].getBoundingClientRect().width;
+    setCardPosition();
+    moveToCard(currentIndex); // repositionne correctement après resize
+  });
+
+  const moveToCard = (index) => {
+    track.style.transform = `translateX(-${cards[index].style.left})`;
+  };
+
+  prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      moveToCard(currentIndex);
+    }
+  });
+
+  nextButton.addEventListener("click", () => {
+    if (currentIndex < cards.length - 1) {
+      currentIndex++;
+      moveToCard(currentIndex);
+    }
+  });
+});
 </script>
 
 
