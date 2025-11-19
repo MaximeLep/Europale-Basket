@@ -498,6 +498,27 @@
   });
 });
 </script>
+<script>
+            // Menu burger responsive
+            document.addEventListener('DOMContentLoaded', () => {
+              const burger = document.querySelector('.burger');
+              const linksResponsive = document.querySelector('.links_responsive');
+
+              burger.addEventListener('click', () => {
+                burger.classList.toggle('active');
+                linksResponsive.classList.toggle('active');
+              });
+
+              // Fermer le menu quand on clique sur un lien
+              const menuLinks = document.querySelectorAll('.links_responsive a');
+              menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                  burger.classList.remove('active');
+                  linksResponsive.classList.remove('active');
+                });
+              });
+            });
+          </script>
 
 
 
