@@ -82,7 +82,7 @@
             <div class="text-box">
                 <span>T . I . B</span>
                 <h3>Tournoi International de Basket</h3>
-                <P>Organisé par l’Europale Basket Club Wimille Wimereux
+                <P>Organisé par l'Europale Basket Club Wimille Wimereux
                     Un week-end de basket, de passion et de rencontres européennes ! 🌍🔥</P>
                 <p>Jeunes talents, ambiance conviviale et esprit sportif au rendez-vous.
                     Ne manquez pas cet événement incontournable !</p>
@@ -172,7 +172,7 @@
                     <div class="profil"><img src="assets/img/mascotte/pirateballe.jpg" alt=""><span>TURPIN Mathieu</span></div>
                 </div>
             </div>
-            <class class="right">
+            <div class="right">
                 <div class="comment down">
                     <p>"aptent mus quisque porttitor convallis tempora eaque blandit phasellus perspiiatis lectus, exercitationem Porttitor consectetur fugit ligula officiis rhoncus litora deserunt ratione curae beatael Augue faubibu"</p>
                     <div class="profil"><img src="assets/img/mascotte/pirateballe.jpg" alt=""><span>DUPONT Fabien</span></div>
@@ -181,7 +181,7 @@
                     <p>"aptent mus quisque porttitor convallis tempora eaque blandit phasellus perspiiatis lectus, exercitationem Porttitor consectetur fugit ligula officiis rhoncus litora deserunt ratione curae beatael Augue faubibu"</p>
                     <div class="profil"><img src="assets/img/mascotte/pirateballe.jpg" alt=""><span>FEUTRY Guy</span></div>
                 </div>
-            </class>
+            </div>
         </section>
         
         <!-- footeur -->
@@ -293,37 +293,65 @@
               <p>&copy; 2025 Europale Basket Club. Tous droits réservés.</p>
             </div>
           </footer>
+
+          <!-- Scripts -->
           <script>
-                    document.addEventListener('DOMContentLoaded', () => {
-          const sections = document.querySelectorAll('section');
+            // Animation au scroll des sections
+            document.addEventListener('DOMContentLoaded', () => {
+              const sections = document.querySelectorAll('section');
 
-          const observerOptions = {
-            threshold: 0.2,
-          };
+              const observerOptions = {
+                threshold: 0.2,
+              };
 
-          const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if(entry.isIntersecting) {
-                entry.target.classList.add('section-visible');
-                observer.unobserve(entry.target);
-              }
-            });
-          }, observerOptions);
+              const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                  if(entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                    observer.unobserve(entry.target);
+                  }
+                });
+              }, observerOptions);
 
-          sections.forEach(section => {
-            section.classList.add('section-hidden');
-            observer.observe(section);
-          });
-        });
-          </script>
-          <script>
-              const button = document.getElementById('scrollBtn');
-              const targetSection = document.getElementById('about');
-
-              button.addEventListener('click', () => {
-                  targetSection.scrollIntoView({ behavior: 'smooth' });
+              sections.forEach(section => {
+                section.classList.add('section-hidden');
+                observer.observe(section);
               });
+            });
           </script>
+
+          <script>
+            // Bouton scroll vers section "about"
+            const button = document.getElementById('scrollBtn');
+            const targetSection = document.getElementById('about');
+
+            button.addEventListener('click', () => {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+          </script>
+
+          <script>
+            // Menu burger responsive
+            document.addEventListener('DOMContentLoaded', () => {
+              const burger = document.querySelector('.burger');
+              const linksResponsive = document.querySelector('.links_responsive');
+
+              burger.addEventListener('click', () => {
+                burger.classList.toggle('active');
+                linksResponsive.classList.toggle('active');
+              });
+
+              // Fermer le menu quand on clique sur un lien
+              const menuLinks = document.querySelectorAll('.links_responsive a');
+              menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                  burger.classList.remove('active');
+                  linksResponsive.classList.remove('active');
+                });
+              });
+            });
+          </script>
+
     <script src="script.js"></script>
 
 </body>
