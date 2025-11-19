@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@100;300;600;700&display=swap');
-
 /* Classes pour l'animation au scroll */
 .section-hidden {
   opacity: 0;
@@ -99,13 +98,13 @@ button{
 .links li a:hover::after{
     width: 100%;
 }
-
 /* home_page_content */
+/* Effet apparition depuis la gauche */
 .home_page_content {
     position: absolute;
     bottom: 60px;
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-100px); /* départ hors de l'écran à gauche */
     animation: slideInFromLeft 1s ease forwards;
     animation-delay: 0.3s;
 }
@@ -160,16 +159,15 @@ button{
 .white_btn i{
     margin-left: 20px;
 }
-
 /* image_box */
 .image_box {
     position: absolute;
     bottom: -140px;
     right: 7%;
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(100px); /* Décalage hors écran à droite */
     animation: slideInFromRight 1s ease-out forwards;
-    animation-delay: 0.3s;
+    animation-delay: 0.3s; /* petit délai pour le timing */
 }
 
 .image_box img {
@@ -196,7 +194,6 @@ button{
     color: #097eeb;
     margin-right: 15px;
 }
-
 /* text_section */
 .text_section{
     display: flex;
@@ -218,7 +215,6 @@ button{
 .text_section h2{
     font-size: 30px;
 }
-
 /* owner */
 .owner {
     display: flex;
@@ -296,7 +292,6 @@ button{
 .content_box p {
     margin-top: 20px;
 }
-
 /* background */
 .background {
     height: 70vh;
@@ -363,7 +358,6 @@ button{
 .text-box button:hover i {
     color: #fff;
 }
-
 /* big */
 .big {
     margin: 290px 0;
@@ -392,10 +386,10 @@ button{
     justify-content: center;
 }
 .services .box img {
-    width: 400px;
-    height: 250px;
-    object-fit: contain;
-    margin-bottom: 20px;
+    width: 400px;        /* largeur très grande */
+    height: 250px;       /* hauteur proportionnelle pour garder le rectangle */
+    object-fit: contain; /* affiche toute l'image sans couper */
+    margin-bottom: 20px; /* espace entre l'image et le titre */
 }
 .services .box h2 {
     margin-top: 30px;
@@ -405,9 +399,9 @@ button{
     color: #999;
 }
 .services .box .details {
-    color: #555;
-    font-size: 14px;
-    margin-top: 5px;
+    color: #555;         /* texte plus doux que le prix */
+    font-size: 14px;     /* légèrement plus petit */
+    margin-top: 5px;     /* petit espace au-dessus */
 }
 
 .contact {
@@ -458,7 +452,6 @@ button{
     display: flex;
     align-items: center;
 }
-
 /* footer */
 
 /* sponsors */
@@ -496,7 +489,7 @@ button{
   animation-duration: 120s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-fill-mode: both;
+  animation-fill-mode: both; /* 🚀 démarre direct */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -577,36 +570,9 @@ button{
 
 .sponsor-bar {
   background-color: #000;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0; /* Réduction de la hauteur intérieure */
   border-top: 1px solid #1a1a1a;
   border-bottom: 1px solid #1a1a1a;
-}
-
-/* Footer map - CSS AJOUTÉ */
-.footer-map {
-  padding: 2rem 0;
-  background-color: #0d0d0d;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-map h4 {
-  color: #fff;
-  margin-bottom: 1.5rem;
-}
-
-.map-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.map-container iframe {
-  display: block;
-  width: 100%;
 }
 
 /* Footer content */
@@ -697,8 +663,7 @@ button{
   color: #888;
   border-top: 1px solid #1a1a1a;
 }
-
-/* burger_responsive - CSS AJOUTÉ */
+/* burger_responsive */
 .burger {
   display: none;
   flex-direction: column;
@@ -734,66 +699,4 @@ button{
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Menu responsive - CSS AJOUTÉ */
-.links_responsive {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 300px;
-  height: 100vh;
-  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  transition: right 0.5s ease;
-  z-index: 999;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-}
 
-.links_responsive.active {
-  right: 0;
-}
-
-.links_responsive li {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.5s ease;
-}
-
-.links_responsive.active li {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.links_responsive.active li:nth-child(1) { transition-delay: 0.1s; }
-.links_responsive.active li:nth-child(2) { transition-delay: 0.2s; }
-.links_responsive.active li:nth-child(3) { transition-delay: 0.3s; }
-.links_responsive.active li:nth-child(4) { transition-delay: 0.4s; }
-.links_responsive.active li:nth-child(5) { transition-delay: 0.5s; }
-
-.links_responsive li a {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-  position: relative;
-  padding: 10px 20px;
-  display: block;
-}
-
-.links_responsive li a::after {
-  content: '';
-  position: absolute;
-  left: 20px;
-  bottom: 5px;
-  background-color: #097eeb;
-  height: 3px;
-  width: 0;
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
-.links_responsive li a:hover::after {
-  width: calc(100% - 40px);
-}
