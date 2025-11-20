@@ -75,7 +75,7 @@
     <br /><br />
 
         <!-- Calendrier des événements -->
-    <section class="events section-hidden" id="events">
+    <section class="events" id="events">
         <div class="text_section">
             <p>EVENEMENTS</p>
             <h2>Nos rendez-vous et moments forts du club</h2>
@@ -103,7 +103,7 @@
         <p>EUROPALE</p>
     </section>
     <!-- News du club -->
-    <section class="news-club section-hidden" id="news">
+    <section class="news-club" id="news">
         <div class="text_section">
             <p>NEWS</p>
             <h2>Actualités et articles du club</h2>
@@ -263,17 +263,6 @@
                 });
             });
 
-            // Intersection Observer pour animation au scroll
-            const sections = document.querySelectorAll('.section-hidden');
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        entry.target.classList.add('section-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.2 });
-            sections.forEach(section => observer.observe(section));
         });
     </script>
 

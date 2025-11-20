@@ -401,124 +401,102 @@
               <p>&copy; 2025 Europale Basket Club. Tous droits réservés.</p>
             </div>
           </footer>
-<script>
-                    document.addEventListener('DOMContentLoaded', () => {
-          const sections = document.querySelectorAll('section');
+        <script>
+                      const button = document.getElementById('scrollBtn');
+                      const targetSection = document.getElementById('about');
 
-          const observerOptions = {
-            threshold: 0.2,
-          };
+                      button.addEventListener('click', () => {
+                          targetSection.scrollIntoView({ behavior: 'smooth' });
+                      });
+                  </script>
+                  <script>
+                  const unlockBtn = document.getElementById('unlock-btn');
+                  const lockScreen = document.querySelector('.lock-screen');
+                  const mainScreen = document.querySelector('.main-screen');
 
-          const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if(entry.isIntersecting) {
-                entry.target.classList.add('section-visible');
-                observer.unobserve(entry.target);
-              }
-            });
-          }, observerOptions);
+                  unlockBtn.addEventListener('click', () => {
+                      // Afficher le profil immédiatement avec opacity 0
+                      mainScreen.style.display = 'block';
 
-          sections.forEach(section => {
-            section.classList.add('section-hidden');
-            observer.observe(section);
-          });
-        });
-          </script>
-          <script>
-              const button = document.getElementById('scrollBtn');
-              const targetSection = document.getElementById('about');
+                      // Petite pause pour déclencher la transition CSS
+                      setTimeout(() => {
+                          mainScreen.classList.add('show');
+                          lockScreen.style.transform = 'translateY(-100%)';
+                          lockScreen.style.opacity = '0';
+                      }, 20);
 
-              button.addEventListener('click', () => {
-                  targetSection.scrollIntoView({ behavior: 'smooth' });
-              });
-          </script>
-          <script>
-          const unlockBtn = document.getElementById('unlock-btn');
-          const lockScreen = document.querySelector('.lock-screen');
-          const mainScreen = document.querySelector('.main-screen');
+                      // Masquer complètement l'écran de verrouillage après l'animation
+                      setTimeout(() => {
+                          lockScreen.style.display = 'none';
+                      }, 620); // correspond à la durée de la transition
+                  });
+        </script>
+        <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const track = document.querySelector(".carousel_track");
+                const prevButton = document.querySelector(".carousel_btn.prev");
+                const nextButton = document.querySelector(".carousel_btn.next");
+                const cards = Array.from(track.children);
 
-          unlockBtn.addEventListener('click', () => {
-              // Afficher le profil immédiatement avec opacity 0
-              mainScreen.style.display = 'block';
+                let cardWidth = cards[0].getBoundingClientRect().width;
+                let currentIndex = 0;
 
-              // Petite pause pour déclencher la transition CSS
-              setTimeout(() => {
-                  mainScreen.classList.add('show');
-                  lockScreen.style.transform = 'translateY(-100%)';
-                  lockScreen.style.opacity = '0';
-              }, 20);
+                // Positionne les cartes horizontalement
+                const setCardPosition = () => {
+                  cards.forEach((card, index) => {
+                    card.style.left = `${index * cardWidth}px`;
+                  });
+                };
 
-              // Masquer complètement l'écran de verrouillage après l'animation
-              setTimeout(() => {
-                  lockScreen.style.display = 'none';
-              }, 620); // correspond à la durée de la transition
-          });
-</script>
-<script>document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector(".carousel_track");
-  const prevButton = document.querySelector(".carousel_btn.prev");
-  const nextButton = document.querySelector(".carousel_btn.next");
-  const cards = Array.from(track.children);
+                setCardPosition();
 
-  let cardWidth = cards[0].getBoundingClientRect().width;
-  let currentIndex = 0;
+                // Met à jour cardWidth lors du redimensionnement de la fenêtre
+                window.addEventListener("resize", () => {
+                  cardWidth = cards[0].getBoundingClientRect().width;
+                  setCardPosition();
+                  moveToCard(currentIndex); // repositionne correctement après resize
+                });
 
-  // Positionne les cartes horizontalement
-  const setCardPosition = () => {
-    cards.forEach((card, index) => {
-      card.style.left = `${index * cardWidth}px`;
-    });
-  };
+                const moveToCard = (index) => {
+                  track.style.transform = `translateX(-${cards[index].style.left})`;
+                };
 
-  setCardPosition();
+                prevButton.addEventListener("click", () => {
+                  if (currentIndex > 0) {
+                    currentIndex--;
+                    moveToCard(currentIndex);
+                  }
+                });
 
-  // Met à jour cardWidth lors du redimensionnement de la fenêtre
-  window.addEventListener("resize", () => {
-    cardWidth = cards[0].getBoundingClientRect().width;
-    setCardPosition();
-    moveToCard(currentIndex); // repositionne correctement après resize
-  });
-
-  const moveToCard = (index) => {
-    track.style.transform = `translateX(-${cards[index].style.left})`;
-  };
-
-  prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      moveToCard(currentIndex);
-    }
-  });
-
-  nextButton.addEventListener("click", () => {
-    if (currentIndex < cards.length - 1) {
-      currentIndex++;
-      moveToCard(currentIndex);
-    }
-  });
-});
-</script>
-<script>
-            // Menu burger responsive
-            document.addEventListener('DOMContentLoaded', () => {
-              const burger = document.querySelector('.burger');
-              const linksResponsive = document.querySelector('.links_responsive');
-
-              burger.addEventListener('click', () => {
-                burger.classList.toggle('active');
-                linksResponsive.classList.toggle('active');
-              });
-
-              // Fermer le menu quand on clique sur un lien
-              const menuLinks = document.querySelectorAll('.links_responsive a');
-              menuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                  burger.classList.remove('active');
-                  linksResponsive.classList.remove('active');
+                nextButton.addEventListener("click", () => {
+                  if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    moveToCard(currentIndex);
+                  }
                 });
               });
-            });
-          </script>
+        </script>
+        <script>
+                    // Menu burger responsive
+                    document.addEventListener('DOMContentLoaded', () => {
+                      const burger = document.querySelector('.burger');
+                      const linksResponsive = document.querySelector('.links_responsive');
+
+                      burger.addEventListener('click', () => {
+                        burger.classList.toggle('active');
+                        linksResponsive.classList.toggle('active');
+                      });
+
+                      // Fermer le menu quand on clique sur un lien
+                      const menuLinks = document.querySelectorAll('.links_responsive a');
+                      menuLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                          burger.classList.remove('active');
+                          linksResponsive.classList.remove('active');
+                        });
+                      });
+                    });
+        </script>
 
 
 
