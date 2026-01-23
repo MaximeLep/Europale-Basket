@@ -1,15 +1,13 @@
 /* ---------------------------- */
-/* Sections événements, news */
+/* Sections événements, news - VERSION AMÉLIORÉE */
 /* ---------------------------- */
-
-
 
 .section-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Text Section spécifique */
+/* Text Section avec effet de profondeur */
 .text_section {
     display: flex;
     justify-content: center;
@@ -17,7 +15,8 @@
     text-align: center;
     font-weight: bold;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    padding: 20px 0;
 }
 
 .text_section p {
@@ -28,15 +27,40 @@
     z-index: -10;
     line-height: 200px;
     text-transform: uppercase;
+    opacity: 0.05;
+    background: linear-gradient(180deg, #1a1a1a 0%, transparent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .text_section h2 {
-    font-size: 32px;
+    font-size: 38px;
     color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.text_section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #097eeb, transparent);
+    border-radius: 2px;
 }
 
 #about h2 {
     color: #000; 
+}
+
+#about h2::after {
+    background: linear-gradient(90deg, transparent, #097eeb, transparent);
 }
 
 #about p {
@@ -46,126 +70,479 @@
 /* Texte gros fond NEWS */
 .news-club .text_section p,
 .events .text_section p {
-    color: #1a1a1a; 
+    color: #1a1a1a;
+    opacity: 0.08;
 }
 
 /* ---------------------------- */
-/* Calendrier des événements avec images */
+/* Calendrier des événements AMÉLIORÉ */
 /* ---------------------------- */
 .events {
-    background-color: #1a1a1a;
-    padding: 60px 15%;
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+    padding: 80px 15%;
+    position: relative;
+    overflow: hidden;
 }
-/* Couleur spécifique pour le gros texte de la section Événements */
+
+/* Effet de grille subtil en arrière-plan */
+.events::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(9, 126, 235, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(9, 126, 235, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.events > * {
+    position: relative;
+    z-index: 1;
+}
+
 .events .text_section p {
-    color: #252525; 
+    color: #1f1f1f; 
 }
 
 .events-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .event-card {
-    background-color: #222;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+    border-radius: 16px;
     overflow: hidden;
-    width: calc(33% - 20px);
     color: #fff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 
+        0 4px 20px rgba(0,0,0,0.3),
+        0 0 0 1px rgba(255,255,255,0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    cursor: pointer;
 }
 
-/* Images des cartes événements : entièrement visibles */
+/* Effet de lumière au survol */
+.event-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(9, 126, 235, 0.15) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.event-card:hover::before {
+    opacity: 1;
+}
+
+.event-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #097eeb, #0a5fb8, #097eeb);
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.event-card:hover::after {
+    transform: scaleX(1);
+}
+
+/* Container pour l'image avec effet overlay */
+.event-card .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    height: 240px;
+}
+
 .event-card img {
     width: 100%;
-    height: auto;       
-    object-fit: contain; 
-    background-color: #000; 
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
+    filter: brightness(0.9) contrast(1.1);
 }
 
+.event-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(1) contrast(1.15);
+}
+
+/* Overlay gradient sur l'image */
+.event-card .image-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(26,26,26,0.95), transparent);
+    pointer-events: none;
+}
+
+.event-card .content {
+    padding: 24px;
+    position: relative;
+}
 
 .event-card h3 {
-    margin: 15px;
-    font-size: 20px;
-    color: #097eeb;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.event-card h3::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: #097eeb;
+    border-radius: 2px;
 }
 
 .event-card p {
-    margin: 0 15px 15px 15px;
-    font-size: 14px;
-    color: #ccc;
+    font-size: 15px;
+    color: #b0b0b0;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.event-card p::before {
+    content: '📅';
+    font-size: 18px;
 }
 
 .event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    transform: translateY(-8px);
+    box-shadow: 
+        0 12px 40px rgba(9, 126, 235, 0.25),
+        0 0 0 1px rgba(9, 126, 235, 0.3);
+}
+
+/* Animation d'apparition */
+.event-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.event-card:nth-child(1) { animation-delay: 0.1s; }
+.event-card:nth-child(2) { animation-delay: 0.2s; }
+.event-card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ---------------------------- */
-/* News du club */
+/* News du club AMÉLIORÉ */
 /* ---------------------------- */
 .news-club {
-    background-color: #252525; /* léger contraste */
-    padding: 60px 15%;
+    background: linear-gradient(180deg, #1a1a1a 0%, #252525 50%, #2d2d2d 100%);
+    padding: 80px 15% 100px 15%;
+    position: relative;
+}
+
+/* Effet de particules subtil */
+.news-club::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, rgba(9, 126, 235, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+/* Dégradé de transition vers le footer */
+.news-club::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, 
+        transparent 0%, 
+        rgba(45, 45, 45, 0.5) 40%,
+        rgba(60, 60, 60, 0.8) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.news-club > * {
+    position: relative;
+    z-index: 1;
 }
 
 .news-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .news-card {
-    background-color: #222;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+    border-radius: 16px;
     overflow: hidden;
-    width: calc(33% - 20px);
     color: #fff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 
+        0 4px 20px rgba(0,0,0,0.4),
+        0 0 0 1px rgba(255,255,255,0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    cursor: pointer;
+}
+
+.news-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #097eeb, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.news-card:hover::before {
+    opacity: 1;
+}
+
+.news-card .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+    background: #000;
 }
 
 .news-card img {
     width: 100%;
-    height: 180px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
+    filter: grayscale(0.2) contrast(1.1);
+}
+
+.news-card:hover img {
+    transform: scale(1.1) rotate(1deg);
+    filter: grayscale(0) contrast(1.15);
+}
+
+/* Badge "NEW" pour les actualités récentes */
+.news-card .badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #097eeb, #0a5fb8);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(9, 126, 235, 0.4);
+    z-index: 2;
+}
+
+.news-card .content {
+    padding: 24px;
 }
 
 .news-card h3 {
-    margin: 15px;
     font-size: 20px;
+    font-weight: 700;
     color: #097eeb;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+    transition: color 0.3s ease;
+}
+
+.news-card:hover h3 {
+    color: #3d9eff;
 }
 
 .news-card p {
-    margin: 0 15px 15px 15px;
-    font-size: 14px;
-    color: #ccc;
+    font-size: 15px;
+    color: #b8b8b8;
+    line-height: 1.7;
 }
 
 .news-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    transform: translateY(-8px);
+    box-shadow: 
+        0 12px 40px rgba(9, 126, 235, 0.2),
+        0 0 0 1px rgba(9, 126, 235, 0.2);
 }
 
+/* Animation d'apparition pour les news */
+.news-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.news-card:nth-child(1) { animation-delay: 0.15s; }
+.news-card:nth-child(2) { animation-delay: 0.25s; }
+.news-card:nth-child(3) { animation-delay: 0.35s; }
+
 /* ---------------------------- */
-/* Responsive */
+/* Responsive Design */
+/* ---------------------------- */
+@media screen and (max-width: 1200px) {
+    .events, .news-club {
+        padding: 60px 10%;
+    }
+}
+
 @media screen and (max-width: 1024px) {
-    .event-card, .news-card {
-        width: calc(50% - 15px);
+    .events-container,
+    .news-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    
+    .text_section p {
+        font-size: 140px;
+        line-height: 160px;
+    }
+    
+    .text_section h2 {
+        font-size: 32px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .event-card, .news-card {
-        width: 100%;
+    .events, .news-club {
+        padding: 50px 5%;
     }
+    
+    .events-container,
+    .news-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
     .text_section p {
-        font-size: 120px;
-        line-height: 140px;
+        font-size: 100px;
+        line-height: 120px;
     }
+    
+    .text_section h2 {
+        font-size: 28px;
+    }
+    
+    .event-card .image-wrapper,
+    .news-card .image-wrapper {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text_section p {
+        font-size: 80px;
+        line-height: 100px;
+    }
+    
+    .text_section h2 {
+        font-size: 24px;
+    }
+    
+    .event-card h3,
+    .news-card h3 {
+        font-size: 18px;
+    }
+    
+    .event-card p,
+    .news-card p {
+        font-size: 14px;
+    }
+}
+
+/* ---------------------------- */
+/* Effets de chargement */
+/* ---------------------------- */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading-skeleton {
+    background: linear-gradient(
+        90deg,
+        #1a1a1a 0%,
+        #252525 50%,
+        #1a1a1a 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* ---------------------------- */
+/* Séparateur visuel avant footer */
+/* ---------------------------- */
+.footer-separator {
+    height: 100px;
+    background: linear-gradient(to bottom, 
+        #2d2d2d 0%,
+        #1a1a1a 50%,
+        #0d0d0d 100%
+    );
+    position: relative;
+}
+
+.footer-separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #097eeb, transparent);
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(9, 126, 235, 0.5);
+}
+
+/* Ajustements footer */
+.site-footer {
+    border-top: 3px solid #097eeb;
+    box-shadow: 0 -5px 30px rgba(9, 126, 235, 0.1);
 }
